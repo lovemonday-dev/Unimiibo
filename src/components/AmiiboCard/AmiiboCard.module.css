@@ -1,0 +1,227 @@
+:root {
+    --anim-params: all ease-in-out 0.2s;
+    --factor-radius: .25;
+    --factor-radius-inner: calc(var(--factor-radius) + .05);
+    --card-border-radius: calc(22% * var(--factor-radius)) / calc(15% * var(--factor-radius));
+    --card-border-radius-inner: calc(22% * var(--factor-radius-inner)) / calc(15% * var(--factor-radius-inner));
+
+    --font-size: 1.5rem;
+    --font-size-small: 0.6em;
+}
+
+.myCard {
+    border-radius: var(--card-border-radius);
+    position: relative;
+    width: 100%;
+    aspect-ratio: 15 / 22;
+    transition: var(--anim-params);
+    color: rgba(0,0,0,0);
+    text-decoration: none;
+}
+
+.myCard:hover {
+    z-index: 1;
+    scale: 102%;
+    box-shadow: 0 10px 15px rgba(16, 37, 55, 0.35);
+    color: rgba(0,0,0,0);
+    text-decoration: none;
+}
+
+.myCard .bgCard {
+    border-radius: var(--card-border-radius-inner);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    overflow: hidden;
+    image-rendering: optimizeQuality;
+    background-size: 25%;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.myCard .bgCard.pink {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_pink.jpg');
+}
+
+.myCard .bgCard.red {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_red.jpg');
+}
+
+.myCard .bgCard.orange {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_orange.jpg');
+}
+
+.myCard .bgCard.yellow {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_yellow.jpg');
+}
+
+.myCard .bgCard.green {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_green.jpg');
+}
+
+.myCard .bgCard.blue {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_blue.jpg');
+}
+
+.myCard .bgCard.purple {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_purple.jpg');
+}
+
+.myCard .bgCard.grey {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_gray.jpg');
+}
+
+.myCard .bgCard::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10%;
+    height: 55%;
+    width: 100%;
+    rotate: -15deg;
+    scale: 150% 100%;
+}
+
+.pink.gradient::after {
+    background: var(--pink-gradient);
+}
+
+.red.gradient::after {
+    background: var(--red-gradient);
+}
+
+.orange.gradient::after {
+    background: var(--orange-gradient);
+}
+
+.yellow.gradient::after {
+    background: var(--yellow-gradient);
+}
+
+.green.gradient::after {
+    background: var(--green-gradient);
+}
+
+.blue.gradient::after {
+    background: var(--blue-gradient);
+}
+
+.purple.gradient::after {
+    background: var(--purple-gradient);
+}
+
+.grey.gradient::after {
+    background: var(--grey-gradient);
+}
+
+.myCard .cardBorder {
+    border-radius: var(--card-border-radius);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.amiiboImg {
+    top: 4%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 60%;
+    max-width: 90%;
+    object-fit: contain;
+    object-position: bottom;
+    position: absolute;
+    transition: var(--anim-params);
+}
+
+.loadingSpinner {
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    object-fit: contain;
+    object-position: bottom;
+    position: absolute;
+}
+
+.myCard:hover > .amiiboImg {
+    scale: 130%;
+    transform: translate(0, -1.1rem);
+}
+
+.myCardTextPosition {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    padding: 5%;
+    height: 36%;
+}
+
+.myCardTextPosition .myCardTextWrapper {
+    font-size-adjust: .52;
+    color: white;
+    text-align: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: var(--font-size);
+}
+
+.myCardTextPosition .myCardTextWrapper .myCardTextName {
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: .05rem;
+}
+
+.myCardTextPosition .myCardTextWrapper .myCardTextSeries {
+    font-size: var(--font-size-small);
+}
+
+@media (1200px <= width <= 1399.7px) {
+    .myCardTextPosition .myCardTextWrapper {
+        --font-size: 1.247rem;
+    }
+}
+
+@media (767px <= width <= 1199.7px) {
+    .myCardTextPosition .myCardTextWrapper {
+        --font-size: 1rem;
+    }
+}
+
+@media (575px <= width <= 766.7px) {
+    .myCardTextPosition .myCardTextWrapper {
+        --font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .myCardTextPosition .myCardTextWrapper {
+        --font-size: calc(10.75vw - .75rem);
+    }
+}
+
+.myCardTextPosition.big .myCardTextWrapper {
+    --font-size: 1.45rem;
+    font-size-adjust: .51;
+}
+
+@media (max-width: 324px) {
+    .myCardTextPosition.big .myCardTextWrapper {
+        --font-size: calc(10.75vw - .75rem);
+    }
+}
+

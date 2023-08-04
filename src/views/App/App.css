@@ -1,0 +1,98 @@
+:root {
+    --dark-pink: rgb(181, 54, 107);
+    --dark-red: rgb(189, 19, 44);
+    --dark-orange: rgb(206, 93, 17);
+    --dark-yellow: rgb(187, 173, 17);
+    --dark-green: rgb(11, 172, 32);
+    --dark-blue: rgb(27, 124, 184);
+    --dark-purple: rgb(113, 31, 203);
+    --dark-grey: rgb(42, 42, 42);
+
+    --light-pink: rgb(224, 117, 179);
+    --light-red: rgb(217, 80, 97);
+    --light-orange: rgb(249, 130, 51);
+    --light-yellow: rgb(230, 203, 93);
+    --light-green: rgb(85, 210, 121);
+    --light-blue: rgb(72, 167, 205);
+    --light-purple: rgb(157, 81, 216);
+    --light-grey: rgb(69, 69, 69);
+
+    --gradient-rotation: -100deg;
+
+    --pink-gradient: linear-gradient(var(--gradient-rotation), var(--dark-pink) 0%, var(--light-pink) 100%);
+    --red-gradient: linear-gradient(var(--gradient-rotation), var(--dark-red) 0%, var(--light-red) 100%);
+    --orange-gradient: linear-gradient(var(--gradient-rotation), var(--dark-orange) 0%, var(--light-orange) 100%);
+    --yellow-gradient: linear-gradient(var(--gradient-rotation), var(--dark-yellow) 0%, var(--light-yellow) 100%);
+    --green-gradient: linear-gradient(var(--gradient-rotation), var(--dark-green) 0%, var(--light-green) 100%);
+    --blue-gradient: linear-gradient(var(--gradient-rotation), var(--dark-blue) 0%, var(--light-blue) 100%);
+    --purple-gradient: linear-gradient(var(--gradient-rotation), var(--dark-purple) 0%, var(--light-purple) 100%);
+    --grey-gradient: linear-gradient(var(--gradient-rotation), var(--dark-grey) 0%, var(--light-grey) 100%);
+
+    --border-size: 0.1rem;
+}
+
+.pink {
+    color: var(--light-pink);
+}
+
+.red {
+    color: var(--light-red);
+}
+
+.orange {
+    color: var(--light-orange);
+}
+
+.yellow {
+    color: var(--light-yellow);
+}
+
+.green {
+    color: var(--light-green);
+}
+
+.blue {
+    color: var(--light-blue);
+}
+
+.purple {
+    color: var(--light-purple);
+}
+
+.grey {
+    color: var(--light-grey);
+}
+
+/*------------------ BORDER --------------------*/
+
+.pink.my-border {
+    border: var(--border-size) solid var(--light-pink);
+}
+
+.red.my-border {
+    border: var(--border-size) solid var(--light-red);
+}
+
+.orange.my-border {
+    border: var(--border-size) solid var(--light-orange);
+}
+
+.yellow.my-border {
+    border: var(--border-size) solid var(--light-yellow);
+}
+
+.green.my-border {
+    border: var(--border-size) solid var(--light-green);
+}
+
+.blue.my-border {
+    border: var(--border-size) solid var(--light-blue);
+}
+
+.purple.my-border {
+    border: var(--border-size) solid var(--light-purple);
+}
+
+.grey.my-border {
+    border: var(--border-size) solid var(--light-grey);
+}

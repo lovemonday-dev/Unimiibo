@@ -1,0 +1,17 @@
+.imgFlag {
+    vertical-align: bottom;
+    width: 1.91rem;
+    object-position: center;
+    object-fit: cover;
+    margin-bottom: 0.2rem;
+}
+
+.imgReadWrite {
+    border-radius: .25rem;
+    height: 1.3rem;
+    aspect-ratio: 1/1;
+}
+
+.cardWrapper {
+    width: 17rem;
+}

@@ -1,0 +1,138 @@
+.imgAmiibos {
+    object-fit: cover;
+    width: 100%;
+    padding-top: 1rem;
+    object-position: top;
+    transition: opacity 2s ease-in-out;
+    animation: translateX 20s ease-in-out infinite;
+    animation-direction: alternate;
+    z-index: -1;
+    scale: 1.1;
+}
+
+@keyframes translateX {
+
+    0% {
+        transform: translate(2.5vw);
+    }
+    50% {
+        transform: translate(-2.5vw);
+    }
+
+    100% {
+        transform: translate(2.5vw);
+    }
+}
+
+.imgAmiibosWrapper {
+    height: 40vh;
+    overflow: hidden;
+}
+
+.imgLoading {
+    scale: 1;
+}
+
+@media (min-width: 768px) {
+    .imgAmiibosWrapper {
+        height: 50vw;
+    }
+
+    .imgAmiibos {
+        animation-duration: 30s;
+    }
+}
+
+@media (min-width: 992px) {
+    .imgAmiibosWrapper {
+        height: 40vw;
+    }
+}
+
+.imgUnimiibo {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    max-width: 35rem;
+    padding: .5rem .5rem;
+}
+
+.imgGames {
+    object-fit: cover;
+    object-position: center;
+}
+
+.font-acme {
+    letter-spacing: .3rem;
+}
+
+.wave-unimiibo {
+    --wave-height: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-unimiibo.top-wave {
+    top: calc(-1 * var(--wave-height) + 1px);
+}
+
+.wave-unimiibo.bottom-wave {
+    bottom: -1px;
+}
+
+.wave-unimiibo svg {
+    position: relative;
+    display: block;
+    height: var(--wave-height);
+}
+
+.top-wave svg {
+    width: 120%;
+}
+
+.bottom-wave svg {
+    transform: scaleX(-1);
+    width: 100%;
+}
+
+.top-wave .shape-fill {
+    fill: rgb(var(--bs-dark-rgb));
+}
+
+.bottom-wave .shape-fill {
+    fill: white;
+}
+
+@media (min-width: 1023px) and (max-width: 1400px) {
+    .wave-unimiibo {
+        --wave-height: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .wave-unimiibo {
+        --wave-height: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wave-unimiibo {
+        --wave-height: 15px;
+    }
+}
+
+.shapes-star {
+    background-image: url('../../assets/Background/star-small.svg');
+    background-position: center;
+    background-size: cover;
+}
+
+@media (min-width: 767px) {
+    .shapes-star {
+        background-image: url('../../assets/Background/star-big.svg');
+    }
+}

@@ -1,0 +1,94 @@
+.imgWrapper {
+    padding: 1rem !important;
+    display: flex;
+    justify-content: center;
+}
+
+.imgWrapper .imgWrapperBg {
+    background-repeat: repeat;
+    background-size: 2.5rem;
+    background-position: center;
+    padding: .05rem;
+    transition: all .25s ease-in-out;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14%;
+}
+
+.imgWrapper .imgWrapperBg.pink {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_pink.jpg');
+}
+
+.imgWrapper .imgWrapperBg.red {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_red.jpg');
+}
+
+.imgWrapper .imgWrapperBg.orange {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_orange.jpg');
+}
+
+.imgWrapper .imgWrapperBg.yellow {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_yellow.jpg');
+}
+
+.imgWrapper .imgWrapperBg.green {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_green.jpg');
+}
+
+.imgWrapper .imgWrapperBg.blue {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_blue.jpg');
+}
+
+.imgWrapper .imgWrapperBg.purple {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_purple.jpg');
+}
+
+.imgWrapper .imgWrapperBg.grey {
+    background-image: url('../../assets/Card/unimiibo_logo_bg_gray.jpg');
+}
+
+.borderRadius {
+    border-radius: 10%;
+}
+
+tbody > tr {
+    cursor: pointer;
+}
+
+tr:hover > .imgWrapper > .imgWrapperBg {
+    scale: 1.15;
+}
+
+tr:hover > td {
+    --bs-table-accent-bg: rgba(223, 228, 230, 0.32);
+}
+
+.imgWrapper .imgWrapperBg .imgAmiibo {
+    height: 5rem;
+    width: 5rem;
+    object-fit: contain;
+    object-position: center;
+    padding: .4rem;
+    transition: all .25s ease-in-out;
+}
+
+tr:hover > .imgWrapper > .imgWrapperBg > .imgAmiibo {
+    scale: 1.5;
+    transform: translate(0, -.5rem);
+}
+
+.loadingSpinner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding-top: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textAmiiboName {
+    font-weight: 300;
+}
